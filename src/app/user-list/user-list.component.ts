@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiResponse } from '../model/ApiResponse';
 import {User} from '../model/user'
+import { DataService } from '../services/data.service';
 import { UserService } from '../user-service.service';
 
 @Component({
@@ -11,12 +13,14 @@ export class UserListComponent implements OnInit {
 
   users: User[];
 
-  constructor(private userService: UserService) {
+  constructor(private service: DataService) {
   }
 
   ngOnInit() {
-    this.userService.findAll().subscribe(data => {
-      this.users = data;
-    });
-  }
+    this.service.getUsers().subscribe(
+      (res: ApiResponse<User>)=>{
+        this.users = res.data
+      }
+    );
+}
 }
