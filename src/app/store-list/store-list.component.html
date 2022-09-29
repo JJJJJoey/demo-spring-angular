@@ -1,20 +1,17 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Store</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-
-  <tbody>
+<div class="container">
+ 
     <tr *ngFor="let store of stores">
-      <td>{{ store.id }}</td>
-      <td>{{ store.name }}</td>
-      <td>{{ store.address }}</td>
-      <td>{{ store.storeCategory }}</td>
-      
 
-      <!-- <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td> -->
+        <div class="card" style="width: 18rem;" href="store">
+             <a class="nav-link" routerLink="/store-list">Stores</a>
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+            <h5 class="card-title">{{store.name}}</h5>
+            <p class="card-text">{{ store.address }}</p>
+            {{ store.storeCategory }}
+            </div>
+        </div>
     </tr>
-  </tbody>
+
+
+</div>   
