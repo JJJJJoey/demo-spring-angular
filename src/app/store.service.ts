@@ -9,7 +9,7 @@ import { Store } from './model/store';
 export class StoreService {
   private storesUrl: string;
   constructor(private http:HttpClient) { 
-    this.storesUrl = 'http://localhost:8080/users';
+    this.storesUrl = 'http://localhost:8080/stores';
   }
 
   public findAll(): Observable<Store[]> {

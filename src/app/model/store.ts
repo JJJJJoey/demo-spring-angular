@@ -1,5 +1,6 @@
 export class Store{
+    id: String;
     name: String;
-    adress: String;
+    address: String;
     storeCategory: String;
 }

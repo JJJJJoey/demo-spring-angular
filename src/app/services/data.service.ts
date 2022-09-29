@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { User } from '../model/user';
 import { ApiResponse } from '../model/ApiResponse';
+import { Store } from '../model/store';
 
 
 @Injectable({
@@ -14,6 +15,10 @@ export class DataService {
 
   getUsers(): Observable<ApiResponse<User>> {
     return this.http.get<ApiResponse<User>>(this.baseUrl + '/users');
+  }
+
+  getStores(): Observable<ApiResponse<Store>> {
+    return this.http.get<ApiResponse<Store>>(this.baseUrl + '/stores');
   }
   
 }

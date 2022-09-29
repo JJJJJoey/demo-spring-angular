@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './user-service.service';
 import { StoreListComponent } from './store-list/store-list.component';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { StoreListComponent } from './store-list/store-list.component';
     UserComponent,
     UserListComponent,
     UserFormComponent,
-    StoreListComponent
+    StoreListComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import {User} from '../model/user'
 import { DataService } from '../services/data.service';
 import { UserService } from '../user-service.service';
 
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
