@@ -4,6 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { User } from '../model/user';
 import { ApiResponse } from '../model/ApiResponse';
 import { Store } from '../model/store';
+import { Product } from '../model/product';
 
 
 @Injectable({
@@ -19,6 +20,10 @@ export class DataService {
 
   getStores(): Observable<ApiResponse<Store>> {
     return this.http.get<ApiResponse<Store>>(this.baseUrl + '/stores');
+  }
+
+  getProducts(): Observable<ApiResponse<Product>> {
+    return this.http.get<ApiResponse<Product>>(this.baseUrl + '/stores');
   }
   
 }

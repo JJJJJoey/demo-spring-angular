@@ -4,6 +4,7 @@ import { ApiResponse } from '../model/ApiResponse';
 import { DataService } from '../services/data.service';
 import { Store } from '../model/store';
 
+
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
@@ -13,12 +14,14 @@ export class StoreComponent implements OnInit {
 
   @Input()
   stores: Store[] = [];
+  
 
   constructor(private service: DataService,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getStores();
+    
   }
 
   getStores(){
@@ -29,5 +32,7 @@ export class StoreComponent implements OnInit {
       }
     )
   }
+
+  
 
 }

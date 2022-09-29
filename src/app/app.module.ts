@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './user-service.service';
 import { StoreListComponent } from './store-list/store-list.component';
 import { StoreComponent } from './store/store.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { StoreComponent } from './store/store.component';
     UserListComponent,
     UserFormComponent,
     StoreListComponent,
-    StoreComponent
+    StoreComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

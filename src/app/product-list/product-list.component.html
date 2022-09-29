@@ -1,15 +1,15 @@
 <div class="container-fluid">
     <div class="row">
                   
-            <tr *ngFor="let store of stores">
+            <tr *ngFor="let product of products">
                 <div class="col">
                     <div class="card" style="width: 18rem;" href="store">
-                        <a class="nav-link" routerLink="/product-list">order from {{store.name}}</a>
+                        <a class="nav-link" routerLink="/product-list">order from {{product.name}}</a>
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
-                            <h5 class="card-title">{{store.name}}</h5>
-                            <p class="card-text">{{ store.address }}</p>
-                            {{ store.storeCategory }}
+                            <h5 class="card-title">{{product.name}}</h5>
+                            <!-- <p class="card-text">{{ product.address }}</p> -->
+                            <!-- {{ product.storeCategory }} -->
                         </div>
                     </div>
                 </div>
