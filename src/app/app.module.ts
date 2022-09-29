@@ -9,13 +9,15 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './user-service.service';
+import { StoreListComponent } from './store-list/store-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     UserListComponent,
-    UserFormComponent
+    UserFormComponent,
+    StoreListComponent
   ],
   imports: [
     BrowserModule,
